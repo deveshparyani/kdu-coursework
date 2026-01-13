@@ -59,15 +59,7 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
-    <build>
+        <!-- Plugin management (optional, for version control) -->
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -77,5 +69,15 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <!-- Plugins actually used in the build -->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
     </build>
+
 </project>
