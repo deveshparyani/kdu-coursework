@@ -2,10 +2,9 @@ package com.myproject.hospitalstaffing.controller;
 
 import com.myproject.hospitalstaffing.entities.Shift;
 import com.myproject.hospitalstaffing.service.ShiftService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/shifts")
@@ -21,5 +20,11 @@ public class ShiftController {
     public Shift createShift(@RequestBody Shift shift) {
         return shiftService.save(shift);
     }
+
+    @GetMapping("/new-year")
+    public List<Shift> getNewYearShifts() {
+        return shiftService.getTop3NewYearShifts();
+    }
+
 }
 

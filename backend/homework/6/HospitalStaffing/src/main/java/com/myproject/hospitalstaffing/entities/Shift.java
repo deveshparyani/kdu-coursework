@@ -15,7 +15,10 @@ public class Shift {
     @GeneratedValue
     private UUID id;
 
-    private LocalDate date;
+    private String shiftName;
+
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     @ManyToOne
     @JoinColumn

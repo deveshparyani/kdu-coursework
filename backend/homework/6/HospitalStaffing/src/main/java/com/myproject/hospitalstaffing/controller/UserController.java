@@ -2,10 +2,8 @@ package com.myproject.hospitalstaffing.controller;
 
 import com.myproject.hospitalstaffing.entities.User;
 import com.myproject.hospitalstaffing.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -21,5 +19,13 @@ public class UserController {
     @PostMapping
     public User create(@RequestBody User user) {
         return userService.save(user);
+    }
+
+    @GetMapping
+    public Page<User> getUsers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "50") int size
+    ) {
+        return userService.getUsers(page, size);
     }
 }
