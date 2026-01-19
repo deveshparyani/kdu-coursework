@@ -1,5 +1,6 @@
 package com.myproject.eventsphere.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Getter;
@@ -34,6 +35,7 @@ public class Event {
     private Long ticketCount;
 
     @OneToMany(mappedBy = "event", orphanRemoval = true)
+    @JsonIgnore
     private List<Ticket> tickets;
 
     public Event(String name, String date, String location, Long ticketCount){

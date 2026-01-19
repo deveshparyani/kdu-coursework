@@ -1,5 +1,6 @@
 package com.myproject.eventsphere.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.myproject.eventsphere.enums.UserRoles;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -28,6 +29,7 @@ public class User {
     private UserRoles role;
 
     @OneToMany(mappedBy = "user", orphanRemoval = true)
+    @JsonIgnore
     private List<Ticket> tickets;
 
     public List<String> getRoles(){

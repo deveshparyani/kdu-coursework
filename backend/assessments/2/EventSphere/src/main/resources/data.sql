@@ -8,7 +8,7 @@ INSERT INTO users (
              gen_random_uuid(),
              'admin',
              '$2a$10$7EqJtq98hPqEX7fNZaFWoOa6zvYzX5eQof8I4oyAbQq8F3F4h1F8a',
-             'ADMIN'
+             'ROLE_ADMIN'
          );
 
 INSERT INTO users (
@@ -20,5 +20,5 @@ INSERT INTO users (
              gen_random_uuid(),
              'user',
              '$2a$10$7EqJtq98hPqEX7fNZaFWoOa6zvYzX5eQof8I4oyAbQq8F3F4h1F8a',
-             'USER'
+             'ROLE_USER'
          );
