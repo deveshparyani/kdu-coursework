@@ -4,7 +4,7 @@ type Query{
 }
 
 type Mutation {
-    addReview(movieId: Int!, rating: Int!): Review
+    addReview(movieId: Int!, rating: Int!, comment: String): Review
 }
 
 
