@@ -1,0 +1,29 @@
+type Query{
+    getMovieById(movieId:Int):Movie
+    getAllMovies:[Movie]
+}
+
+type Mutation {
+    addReview(movieId: Int!, rating: Int!, comment: String): Review
+}
+
+
+type Movie {
+    id: ID!
+    title: String
+    genre: String
+    director: Director
+    averageRating: Float
+}
+
+type Director {
+    id: ID!
+    name: String
+    totalAwards: Int
+}
+
+type Review {
+    id: ID!
+    rating: Int
+    movie: Movie
+}
