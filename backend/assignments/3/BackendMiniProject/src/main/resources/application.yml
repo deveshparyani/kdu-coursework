@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart_home_management_system
+    username: devesh
+    password: ""
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
