@@ -1,0 +1,454 @@
+$primary: #2563eb;
+$secondary: #7c3aed;
+$accent:  #f59e0b;
+$textDark: #1f2937;
+$textLight: #6b7280;
+
+$space-xs: 0.5rem;  // 8px
+$space-sm: 1rem;    // 16px
+$space-md: 1.5rem;  // 24px
+$space-lg: 2rem;    // 32px
+$space-xl: 3rem;    // 48px
+$space-2xl: 4rem;   // 64px
+
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+}
+
+//---------------------- Header ------------------------------
+
+.header{
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h2{
+        span{
+            color: $primary;
+        }
+    }
+
+    box-shadow: 2px 2px 4px lightgrey;
+}
+
+.navbar{
+    display: flex;
+    gap: $space-2xl;
+
+    a{
+        color: $textLight;
+        text-decoration: none;
+    }
+    
+}
+
+.main{
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2xl;
+}
+
+
+// ----------------------- Hero Section ----------------------------
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: $space-2xl;
+    margin-left: $space-2xl;
+    margin-right: $space-2xl;
+}
+
+.hero_one{
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    h1{
+        margin: 0;
+        font-size: 5rem;
+        line-height: 1.2;
+        max-width: 10ch;
+    }
+
+    p{
+        font-size: larger;
+        max-width: 45ch;
+        line-height: 1.6;
+        color: $textLight;
+    }
+}
+
+.hero_buttons{
+    display: flex;
+    gap: $space-sm;
+    
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $space-sm $space-md;
+        border-radius: 5px;
+    }
+
+}
+
+#btn_1{
+    color: white;
+    background-color: $primary;
+    border-color: $primary;
+}
+
+#btn_2{
+    color: $primary;
+    background-color: white;
+    border-color: $primary;
+    font-weight: bolder;
+}
+
+.hero_image{
+    width: 100%;
+    max-width: 720px;
+    border-radius: 25px;
+    overflow: hidden;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+}
+
+
+// ------------------------Features ----------------------
+.features{
+    background-color: #f9fafb;
+    padding: $space-xl;
+
+    .features_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+        gap: $space-md;
+        justify-content: center;
+    }
+
+    .feature-card {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+
+        padding: $space-md;
+        border-radius: 16px;
+        background: white;
+
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature__image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 12px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .feature__title{
+        margin: 0;
+        text-align: center;
+    }
+
+
+    .feature__description{
+        color: $textLight;
+        text-align: center;
+
+        span{
+            font-weight: bold;
+            color: black;
+        }
+        
+    }
+}
+
+.features_heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $space-lg;
+
+    h1{
+        margin: 0;
+        font-size: 2.5rem;
+
+        span{
+            color: $primary;
+        }
+    }
+
+    p{
+        color: $textLight
+    }
+}
+
+
+
+.courses {
+  background-color: #ffffff;
+  padding: $space-2xl;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-2xl;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+
+    &--highlight {
+      color: $primary;
+    }
+  }
+
+  &__subtitle {
+    margin-top: $space-sm;
+    font-size: 1rem;
+    color: $textLight;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: $space-lg;
+    justify-content: center;
+  }
+}
+
+
+.course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.course-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.course-card__badge {
+  position: absolute;
+  top: $space-sm;
+  right: $space-sm;
+
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+
+  &--beginner {
+    background-color: $accent;
+  }
+
+  &--intermediate {
+    background-color: #f59e0b;
+  }
+
+  &--advanced {
+    background-color: #0ea5e9;
+  }
+}
+
+
+.course-card__content {
+  padding: $space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  flex: 1;
+}
+
+.course-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: $textDark;
+}
+
+.course-card__description {
+  font-size: 0.95rem;
+  color: $textLight;
+  line-height: 1.6;
+}
+
+
+.course-card__features {
+  list-style: none;
+  padding: 0;
+  margin: $space-sm 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    font-size: 0.9rem;
+    color: $textLight;
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.course-card__footer {
+  margin-top: auto;
+  padding-top: $space-md;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+}
+
+.course-card__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $textDark;
+}
+
+.course-card__cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+// --------------------- Stats ----------------------
+
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $primary;
+    background-image: linear-gradient(to right, $primary , $secondary);
+    min-height: 14rem;
+
+    .stats__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $space-sm;
+        color: white;
+
+    }
+
+    .stats__value{
+        font-size: 4rem;
+        font-weight: bold;
+
+        span{
+            color: $primary;
+        }
+    }
+}
+
+
+.contact__heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact__heading__title{
+        font-size: $space-xl;
+        font-weight: bold;
+        span{
+            color: $primary;
+        }
+    }
+
+    .contact__heading__description{
+        color: $textLight; 
+    }
+}
+
+.contact__container{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap: $space-2xl;
+}
+
+.contact_form_content{
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+    background-color: #f9fafb;;
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $textDark;
+    color: white;
+    padding-top: 10px;
+    margin: 0;
+}
+
+
+
