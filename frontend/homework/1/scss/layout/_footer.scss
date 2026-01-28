@@ -1,0 +1,10 @@
+@use "../abstract/index" as *;
+
+.footer {
+  @include flex-column;
+  align-items: center;
+  background-color: $textDark;
+  color: white;
+  padding-top: 10px;
+  margin: 0;
+}

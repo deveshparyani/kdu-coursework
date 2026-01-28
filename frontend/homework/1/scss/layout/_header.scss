@@ -1,0 +1,25 @@
+@use "../abstract/index" as *;
+
+.header {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2px 2px 4px lightgrey;
+
+  h2 {
+    span {
+      color: $primary;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  gap: $space-2xl;
+
+  a {
+    color: $textLight;
+    text-decoration: none;
+  }
+}

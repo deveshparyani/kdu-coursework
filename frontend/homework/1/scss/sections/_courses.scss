@@ -1,0 +1,43 @@
+@use "../abstract/index" as *;
+
+.courses {
+  background-color: #ffffff;
+  padding: $space-2xl;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-2xl;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+
+    &--highlight {
+      color: $primary;
+    }
+  }
+
+  &__subtitle {
+    margin-top: $space-sm;
+    font-size: 1rem;
+    color: $textLight;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: $space-lg;
+    justify-content: center;
+  }
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

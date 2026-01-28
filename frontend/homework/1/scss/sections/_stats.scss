@@ -1,0 +1,20 @@
+@use "../abstract/index" as *;
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right, $primary, $secondary);
+  min-height: 14rem;
+
+  .stats__container {
+    @include flex-column($space-sm);
+    align-items: center;
+    color: white;
+  }
+
+  .stats__value {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+}

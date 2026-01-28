@@ -1,0 +1,64 @@
+@use "../abstract/index" as *;
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: $space-2xl;
+}
+
+.hero_one {
+  @include flex-column($space-sm);
+
+  h1 {
+    margin: 0;
+    font-size: 5rem;
+    line-height: 1.2;
+    max-width: 10ch;
+  }
+
+  p {
+    font-size: larger;
+    max-width: 45ch;
+    line-height: 1.6;
+    color: $textLight;
+  }
+}
+
+.hero_buttons {
+  display: flex;
+  gap: $space-sm;
+
+  button {
+    @include flex-center;
+    padding: $space-sm $space-md;
+    border-radius: 5px;
+  }
+}
+
+#btn_1 {
+  color: white;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+#btn_2 {
+  color: $primary;
+  background-color: white;
+  border-color: $primary;
+  font-weight: bolder;
+}
+
+.hero_image {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

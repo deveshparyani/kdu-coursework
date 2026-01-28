@@ -1,0 +1,185 @@
+@use "../abstract/index" as *;
+
+.contact {
+  padding: $space-2xl;
+}
+
+.contact__heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .contact__heading__title{
+    font-size: 3rem;
+    font-weight: bold;
+
+    span{
+      color: blue;
+    }
+  }
+}
+
+.contact__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.contact__details {
+  max-width: 420px;
+}
+
+.contact__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $textDark;
+}
+
+.contact__subtitle {
+  margin: $space-sm 0 $space-xl;
+  color: $textLight;
+  line-height: 1.6;
+}
+
+.contact__info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $space-xl 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.contact__item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.contact__label {
+  font-weight: 600;
+  color: $textDark;
+}
+
+.contact__value {
+  color: $textLight;
+  text-decoration: none;
+}
+
+.contact__social-title {
+  margin-bottom: $space-sm;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact__socials {
+  list-style: decimal;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact__social-link {
+  text-decoration: none;
+  color: $textLight;
+}
+
+.contact__form {
+  background: #ffffff;
+  padding: $space-2xl;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 560px;
+}
+
+.contact_form_content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.contact_form_content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact_form_content label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $textDark;
+
+  span {
+    color: red;
+  }
+}
+
+.inp,
+select,
+textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  outline: none;
+  background: #ffffff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inp:focus,
+select:focus,
+textarea:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.subscribe-checkbox{
+  display: flex
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='gray' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+input[type="radio"] {
+  margin-right: 0.3rem;
+  accent-color: $primary;
+}
+
+input[type="checkbox"] {
+  accent-color: $primary;
+  margin-right: 0.5rem;
+}
+
+.sub-btn {
+  margin-top: $space-md;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: $primary;
+  cursor: pointer;
+}
+
+.sub-btn:hover {
+  background: darken($primary, 8%);
+  transform: translateY(-1px);
+}

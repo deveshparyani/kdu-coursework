@@ -1,0 +1,69 @@
+@use "../abstract/index" as *;
+
+.features {
+  background-color: #f9fafb;
+  padding: $space-xl;
+
+  .features_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+    gap: $space-md;
+    justify-content: center;
+  }
+
+  .feature-card {
+    @include flex-column($space-sm);
+    padding: $space-md;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .feature__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .feature__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .feature__description {
+    color: $textLight;
+    text-align: center;
+
+    span {
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+
+.features_heading {
+  @include flex-column($space-sm);
+  align-items: center;
+  margin-bottom: $space-lg;
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  p {
+    color: $textLight;
+  }
+}

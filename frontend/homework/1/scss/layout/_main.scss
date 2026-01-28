@@ -1,0 +1,8 @@
+@use "../abstract/index" as *;
+
+.main {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2xl;
+}
